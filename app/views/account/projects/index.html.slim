@@ -1,0 +1,13 @@
+.container
+  .projects
+    .project
+      .title.is-medium
+        = link_to 'New project', new_account_project_url
+    - @projects.each do |project|
+      .project
+        .title.is-5
+          = link_to project.name, account_project_path(project)
+        .options
+          = link_to 'Edit', edit_account_project_path(project)
+          '
+          = link_to 'Delete', account_project_path(project), method: :delete, data: {confirm: "Are you sure?"}

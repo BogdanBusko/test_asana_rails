@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bulma";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a, a:visited, a:hover, a:link, a:active {
+  background-color: transparent;
+  color: #363636;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .project {
+    height: 200px;
+    width: 200px;
+    border: 2px solid #363636;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+
+.form {
+  height: 200px;
+  width: 300px;
+  margin: auto;
+
+  input, textarea, .button {
+    margin-top: 20px;
+  }
+
+  textarea {
+    height: 100px;
+  }
+}
+
+.tasks {
+  width: 800px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  .button {
+    width: 200px;
+  }
+
+  .task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+}

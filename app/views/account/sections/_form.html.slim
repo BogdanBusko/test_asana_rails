@@ -1,0 +1,9 @@
+.tags.is-centered.title
+  = yield(:form_title)
+.form
+  = form_for @section, url: yield(:url) do |f|
+    = f.text_field :name, placehoder: 'Section name', class: 'input'
+    br
+    = f.submit 'Save', class: 'button'
+    '
+    = link_to 'Cancel', account_project_path(@project), class: 'button'

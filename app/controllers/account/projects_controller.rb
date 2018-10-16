@@ -6,7 +6,7 @@ class Account::ProjectsController < ApplicationController
   end
 
   def show
-    @tasks = @project.tasks.order(created_at: :desc)
+    @sections = @project.sections.order(id: :asc)
   end
 
   def new

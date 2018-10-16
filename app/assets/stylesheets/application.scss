@@ -60,21 +60,35 @@ a, a:visited, a:hover, a:link, a:active {
   }
 }
 
-.tasks {
-  width: 800px;
+.sections {
+  min-width: 1200px;
   margin: auto;
+  overflow-x: scroll;
+  white-space: nowrap;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 
   .button {
     width: 200px;
   }
 
+  .section {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+}
+
+.add-new-section {
+  margin-left: 10px;
+}
+
+.tasks {
   .task {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 20px;
   }
 }

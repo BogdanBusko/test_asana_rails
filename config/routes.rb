@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   namespace :account do
     get '/dashboard', to: 'dashboard#index'
     resources :projects do
-      resources :tasks, except: :index
+      resources :sections, except: [:index, :show] do
+        resources :tasks, except: :index
+      end
     end
   end
 end
